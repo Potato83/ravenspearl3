@@ -2415,7 +2415,6 @@ $(function() {
 
     $('.closer').click(function(){
       $( '.bio' ).fadeOut(400);
-      //$('body').removeClass('no-scroll');
       $('.container-fluid').removeClass('hide');
     });
 
@@ -2435,6 +2434,12 @@ $(function() {
             $('.mini-submenu').hide();
         });
       });
+
+
+
+
+
+
 }); // document ready
 
 
@@ -2443,40 +2448,43 @@ $(function() {
 $( document ).on( 'keydown', function ( e ) {
     if ( e.keyCode === 27 ) { // ESC
         $( '.bio' ).fadeOut(400);
-      	//$('body').removeClass('no-scroll');   	
         $('.container-fluid').removeClass('hide');
   	}
 });
-
-
-// $('.gallery-thumb').each(function(){
-//   $cover = $(this);
-//   $cover.click(function(){
-//     $(this).addClass('selected');
-//     $(this).parents('li.product-category').siblings('li.product-category').children('div.gallery-thumb').removeClass('selected');
-//   });
-// });
-
 
 
 $('.to-top').click(function(){
   $('html, body').animate({ scrollTop: 875 }, 400);
 });
 
-// fancy fade in
+// scroll test
 
-// $(document).ready(function() {
-//   console.log('one');
-//   var $bg = $('.banner');
-//   var backgroundImage = window.getComputedStyle($bg[0], null).backgroundImage;
-//   var image = backgroundImage.match(/url\((.*?)\)/)[1];
-//       image = image.replace(/"/g, "");
-//       var sprite = new Image();
-//       sprite.src = image;
-//         sprite.onload = function() {
-//           $bg.addClass('reveal');
-//         }       
-// });
+// // Select all links with hashes
+// $('a[href*="#"]')
+//   // Remove links that don't actually link to anything
+//   .not('[href="#"]')
+//   .not('[href="#0"]')
+//   .click(function(event) {
+//     // On-page links
+//     if (
+//       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+//       && 
+//       location.hostname == this.hostname
+//     ) {
+//       // Figure out element to scroll to
+//       var target = $(this.hash);
+//       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+//       // Does a scroll target exist?
+//       if (target.length) {
+//         // Only prevent default if animation is actually gonna happen
+//         event.preventDefault();
+//         $('html, body').animate({
+//           scrollTop: target.offset().top
+//         }, 500);
+//       }
+//     }
+//   });
+
 
 
 

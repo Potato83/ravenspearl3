@@ -182,21 +182,24 @@ li.product-category > h3{
 .navbar-nav > ul > li {
 	list-style: none;
 	display: inline-block;
-	padding: 5px;
+	padding-top: 5px;
 }
 
 .navbar-nav{
-	background: #1a1a1a;
+	/*background: #1a1a1a;*/
+	
 }
 
 .navbar-wrapper{
-	background: #1a1a1a;
+	/*background: #1a1a1a;	*/
+	/*background: rgba(0,0,0,0.5);*/
+	/*background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.5), rgba(0,0,0,0.1));*/
+	background: radial-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.01));
 	width: 100%;
 	height: 59px;
 	z-index: 999;
 	position: relative;
 	z-index: 3;
-	
 }
 
 .icon-bar {
@@ -248,7 +251,8 @@ li.product-category > h3{
 	height: 100vh;
 	background: #ccc;
 	background: url('../img/MultiFo.jpg') no-repeat;
-	opacity: 0.1;
+	/*background: red;*/
+	opacity: 0.5;
 	background-size: 100%;
 	z-index: 2;
 	position: relative;
@@ -257,11 +261,12 @@ li.product-category > h3{
 	color: #fff;
 	padding-top: 80px;
 	max-width: 100vw;
+	top: -75px; /* test */
 }
 
 .reveal{
 	opacity: 1;
-  transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in !important;
 }
 
 .banner a,
@@ -857,6 +862,8 @@ input[name=update_cart]{
 @media (min-width: 767px){
 	.navbar-nav{
 		height: 59px;
+		position: relative;
+		bottom: 10px;
 	}
 	.navbar-collapse.collapse{
 		background: transparent;
@@ -1132,14 +1139,37 @@ input[name=update_cart]{
 	pointer-events: none;
 }
 
-#scroll-down{
+@media(min-width: 768px){
+	#scroll-down{
 	background: rgba(0,0,0,0.5);
 	border-radius: 10px;
-	width: 50px;	
+	width: 60px;
+	height: 100px;	
 	position: absolute;
 	right: 50px;
-	bottom: 250px;
+	bottom: 150px;
+	z-index: 1000;
+	cursor: pointer;
+	}
+
+	.banner a, .banner a:hover{
+		color: #fff;
+	}
 }
+
+@media(max-width: 767px){
+	#scroll-down{
+		display: none;
+	}
+}
+
+.navbar-collapse.collapse.in, .navbar-collapse.collapsing{
+	background: rgba(0,0,0,0.7);
+}
+
+
+
+
 
 
 

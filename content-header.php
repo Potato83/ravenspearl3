@@ -1,9 +1,11 @@
 <header>
 	<?php get_template_part('content', 'menu'); ?>
 	<div class="container-fluid banner"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
-		<div id="scroll-down">
-	    <i class="fa fa-angle-down"></i>
-	  </div>
+		<a href="#disciplines" rel='m_PageScroll2id'>
+			<div id="scroll-down">
+		    <i class="fa fa-angle-down"></i>
+		  </div>
+	  </a>
 	</div> 
 	  
 </header>
