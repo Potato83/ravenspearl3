@@ -1,0 +1,10 @@
+node_modules/*
+.DS_Store
+*/.DS_Store
+assets/css/style.min.css
+assets-src/img/*
+assets-src/css/bootstrap.css
+assets-src/css/normalize.css
+assets-src/js/libs/bootstrap.js
+assets/css/font-awesome/**
+languages/*
