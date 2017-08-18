@@ -1,6 +1,6 @@
 $(function() {
 
-  // fancy fadeIn
+ // fancy fadeIn
 
   var $bg = $('.banner');
   var backgroundImage = window.getComputedStyle($bg[0], null).backgroundImage;

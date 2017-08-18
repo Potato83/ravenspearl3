@@ -1132,6 +1132,14 @@ input[name=update_cart]{
 	pointer-events: none;
 }
 
+#scroll-down{
+	background: rgba(0,0,0,0.5);
+	border-radius: 10px;
+	width: 50px;	
+	position: absolute;
+	right: 50px;
+	bottom: 250px;
+}
 
 
 
