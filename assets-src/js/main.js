@@ -1,5 +1,20 @@
 $(function() {
-    console.log( "ready!" );
+
+  // fancy fadeIn
+
+  var $bg = $('.banner');
+  var backgroundImage = window.getComputedStyle($bg[0], null).backgroundImage;
+  var image = backgroundImage.match(/url\((.*?)\)/)[1];
+  image = image.replace(/"/g, "");
+  var sprite = new Image();
+  sprite.src = image;
+  sprite.onload = function() {
+    $bg.addClass('reveal');
+  }       
+
+
+
+    console.log( "ready plz!!!" );
     // gallery adjust
     $('.thumb>img').each(function(){
     var high = $(this).attr('height');
@@ -83,6 +98,21 @@ $( document ).on( 'keydown', function ( e ) {
 $('.to-top').click(function(){
   $('html, body').animate({ scrollTop: 875 }, 400);
 });
+
+// fancy fade in
+
+// $(document).ready(function() {
+//   console.log('one');
+//   var $bg = $('.banner');
+//   var backgroundImage = window.getComputedStyle($bg[0], null).backgroundImage;
+//   var image = backgroundImage.match(/url\((.*?)\)/)[1];
+//       image = image.replace(/"/g, "");
+//       var sprite = new Image();
+//       sprite.src = image;
+//         sprite.onload = function() {
+//           $bg.addClass('reveal');
+//         }       
+// });
 
 
 
