@@ -45,7 +45,9 @@ $loop = new WP_Query( $args ); ?>
 		$string = str_replace(' ', '', $string); ?>
 		
 		<li class="product col-md-4 testy-row" id="<?php echo $string; ?>">
-		<a href="<?php echo the_post_thumbnail_url(); ?>" data-rel="lightbox" ><div class="thumb darken">
+		<!-- <a href="<?php echo the_post_thumbnail_url(); ?>" data-rel="lightbox" ><div class="thumb darken"> -->
+		<!-- link to single product page instead of opening lightbox -->
+		<a href="<?php echo the_permalink(); ?>" data-rel="lightbox" ><div class="thumb darken">
 	<?php
 		echo the_post_thumbnail( 'full', array('class' => 'img-responsive'));
 		echo "</div></a>";
